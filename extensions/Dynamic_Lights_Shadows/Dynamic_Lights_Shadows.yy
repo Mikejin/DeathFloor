@@ -1,0 +1,71 @@
+{
+    "id": "83d0bbcb-b079-4944-8c5e-30ebfa033641",
+    "modelName": "GMExtension",
+    "mvc": "1.0",
+    "name": "Dynamic_Lights_Shadows",
+    "IncludedResources": [
+        "Sprites\\GameExample\\spr_light",
+        "Sprites\\GameExample\\spr_target",
+        "Sprites\\GameExample\\spr_enemy",
+        "Sprites\\GameExample\\spr_wall",
+        "Backgrounds\\bg_floor",
+        "Scripts\\DynamicLS\\Core\\scr_ls_global_variables",
+        "Scripts\\DynamicLS\\Core\\scr_ls_light_update",
+        "Scripts\\DynamicLS\\Core\\scr_ls_light_draw",
+        "Scripts\\DynamicLS\\Core\\scr_ls_lightmap_create",
+        "Scripts\\DynamicLS\\Core\\scr_ls_lightmap_step",
+        "Scripts\\DynamicLS\\Core\\scr_ls_lightmap_draw",
+        "Scripts\\DynamicLS\\scr_ls_config",
+        "Scripts\\DynamicLS\\scr_ls_start",
+        "Scripts\\DynamicLS\\scr_ls_light_create",
+        "Scripts\\DynamicLS\\scr_ls_light_create_ext",
+        "Scripts\\DynamicLS\\scr_ls_lightblocker_create",
+        "Scripts\\DynamicLS\\scr_ls_lightblocker_create_ext",
+        "Objects\\LightSystem\\obj_ls_light",
+        "Objects\\LightSystem\\obj_ls_lightblocker",
+        "Objects\\LightSystem\\obj_ls_lightmap",
+        "Objects\\GameExample\\obj_light",
+        "Objects\\GameExample\\obj_target",
+        "Objects\\GameExample\\obj_wall",
+        "Objects\\GameExample\\obj_enemy",
+        "Rooms\\rm_main",
+        "Included Files\\README.txt"
+    ],
+    "androidPermissions": [
+        
+    ],
+    "androidProps": false,
+    "androidactivityinject": "",
+    "androidclassname": "",
+    "androidinject": "",
+    "androidmanifestinject": "",
+    "androidsourcedir": "",
+    "author": "",
+    "classname": "",
+    "copyToTargets": -1,
+    "date": "2017-38-06 02:06:02",
+    "description": "",
+    "extensionName": "",
+    "files": [
+        
+    ],
+    "gradleinject": "",
+    "helpfile": "",
+    "installdir": "",
+    "iosProps": false,
+    "iosSystemFrameworkEntries": [
+        
+    ],
+    "iosThirdPartyFrameworkEntries": [
+        
+    ],
+    "iosplistinject": "",
+    "license": "Free to use, also for commercial games.",
+    "maccompilerflags": "",
+    "maclinkerflags": "",
+    "macsourcedir": "",
+    "packageID": "com.thelordofthepixels.dls",
+    "productID": "ACBD3CFF4E539AD869A0E8E3B4B022DD",
+    "sourcedir": "",
+    "version": "1.0.2"
+}

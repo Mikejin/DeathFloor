@@ -1,0 +1,4 @@
+/// @description Draw Player
+
+draw_sprite_ext(sprite_index, image_index, round(x), round(y), facing, image_yscale, image_angle, c_white, 1);
+

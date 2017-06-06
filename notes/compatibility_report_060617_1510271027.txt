@@ -1,0 +1,8 @@
+Converting GML script : ${project_dir}\objects\obPlayer\Create_0.gml
+Converted description : /// @description Initialize Player
+
+Converting GML script : ${project_dir}\objects\obPlayer\Step_0.gml
+Converted description : /// @description Process Player
+
+Converting GML script : ${project_dir}\objects\obPlayer\Draw_0.gml
+Converted description : /// @description Draw Player
