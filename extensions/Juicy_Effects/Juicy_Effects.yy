@@ -1,0 +1,71 @@
+{
+    "id": "77e11575-a4d6-4814-ba02-f87d9f127081",
+    "modelName": "GMExtension",
+    "mvc": "1.0",
+    "name": "Juicy_Effects",
+    "IncludedResources": [
+        "Sprites\\spr_square_32",
+        "Sprites\\spr_square_64",
+        "Sprites\\spr_square_66",
+        "Sprites\\spr_circle_64",
+        "Backgrounds\\bg_bg",
+        "Scripts\\jfx_to_point",
+        "Scripts\\jfx_spring",
+        "Scripts\\jfx_cycle",
+        "Scripts\\jfx_bounce",
+        "Scripts\\jfx_bounce_calc",
+        "Scripts\\jfx_linear",
+        "Objects\\obj_control",
+        "Objects\\Scene 1\\obj_to_point",
+        "Objects\\Scene 2\\obj_scale_spring1",
+        "Objects\\Scene 2\\obj_scale_spring2",
+        "Objects\\Scene 2\\obj_scale_spring3",
+        "Objects\\Scene 2\\obj_scale_spring4",
+        "Objects\\Scene 2\\obj_move_spring",
+        "Objects\\Scene 3\\obj_scale_cycle",
+        "Objects\\Scene 3\\obj_move_cycle",
+        "Objects\\Scene 4\\obj_move_bounce",
+        "Objects\\Scene 4\\obj_scale_bounce",
+        "Objects\\Scene 4\\obj_move_bounce_physics1",
+        "Objects\\Scene 4\\obj_move_bounce_physics2",
+        "Objects\\Scene 4\\obj_floor",
+        "Rooms\\rm_main"
+    ],
+    "androidPermissions": [
+        
+    ],
+    "androidProps": false,
+    "androidactivityinject": "",
+    "androidclassname": "",
+    "androidinject": "",
+    "androidmanifestinject": "",
+    "androidsourcedir": "",
+    "author": "",
+    "classname": "",
+    "copyToTargets": -1,
+    "date": "2017-48-07 05:06:39",
+    "description": "",
+    "extensionName": "",
+    "files": [
+        
+    ],
+    "gradleinject": "",
+    "helpfile": "",
+    "installdir": "",
+    "iosProps": false,
+    "iosSystemFrameworkEntries": [
+        
+    ],
+    "iosThirdPartyFrameworkEntries": [
+        
+    ],
+    "iosplistinject": "",
+    "license": "Free to use, also for commercial games.",
+    "maccompilerflags": "",
+    "maclinkerflags": "",
+    "macsourcedir": "",
+    "packageID": "com.wupto.jfx",
+    "productID": "ACBD3CFF4E539AD869A0E8E3B4B022DD",
+    "sourcedir": "",
+    "version": "1.0.1"
+}

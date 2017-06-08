@@ -1,0 +1,8 @@
+Converting GML script : ${project_dir}\scripts\draw_healthbar_circular\draw_healthbar_circular.gml
+Converted description : /// @description draw_healthbar_circular(center x, center y, radius, start angle, percent health, sprite)/// @function draw_healthbar_circular
+/// @param center x
+/// @param  center y
+/// @param  radius
+/// @param  start angle
+/// @param  percent health
+/// @param  sprite

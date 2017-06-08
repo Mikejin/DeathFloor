@@ -23,6 +23,7 @@ with(light) {
     flickering_level = 0;
     flickerings_count = 0;
     visible = false;
+	belongsTo = other.id;
 }
 
 return light;

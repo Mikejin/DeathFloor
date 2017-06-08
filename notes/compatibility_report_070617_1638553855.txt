@@ -1,0 +1,7 @@
+Converting GML script : ${project_dir}\scripts\draw_circle_width\draw_circle_width.gml
+Converted description : /// @description draw_circle_width(x, y, radius, outline width, level of detail)/// @function draw_circle_width
+/// @param x
+/// @param  y
+/// @param  radius
+/// @param  outline width
+/// @param  level of detail

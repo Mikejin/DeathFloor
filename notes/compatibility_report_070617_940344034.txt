@@ -1,0 +1,53 @@
+Converting GML script : ${project_dir}\objects\obj_control\Create_0.gml
+Converted builtin : line 21 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 21 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted string : line 26 : 'R' -> "R"
+Converted string : line 28 : 'D' -> "D"
+Converted string : line 29 : 'A' -> "A"
+Converted string : line 30 : 'W' -> "W"
+Converted string : line 31 : 'S' -> "S"
+
+Converting GML script : ${project_dir}\objects\obj_control\Step_2.gml
+Converted builtin : line 14 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 14 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 14 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 14 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 21 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 29 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 30 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 31 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 14 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 14 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 14 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 14 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 21 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 29 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 30 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 31 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 3 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 14 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 3 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted builtin : line 14 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script : ${project_dir}\objects\obj_control\Draw_64.gml
+Converted builtin : line 6 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 7 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 8 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 12 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 6 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 7 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 8 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 12 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 6 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 7 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 8 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 12 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 6 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted builtin : line 7 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted builtin : line 8 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script : ${project_dir}\objects\obj_control\Draw_0.gml
+Converted builtin : line 3 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 3 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+
+updated compatibility script __global_object_depths.gml

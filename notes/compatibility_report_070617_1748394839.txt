@@ -1,0 +1,6 @@
+Converting GML script : ${project_dir}\objects\obj_control\Create_0.gml
+Converted string : line 36 : 'R' -> "R"
+
+Converting GML script : ${project_dir}\objects\obj_control\Draw_64.gml
+Converted builtin : line 5 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 5 : view_wview -> __view_get( e__VW.WView, 0 )
