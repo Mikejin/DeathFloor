@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "2429afe9-c304-4d94-8d7f-f86749016007",
+            "Value": {
+                "id": "647e0b3d-f08a-4091-b832-3db14d559d6c",
+                "resourcePath": "views\\2429afe9-c304-4d94-8d7f-f86749016007.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "24c3d45c-2b8f-4717-ab6e-01941056a162",
             "Value": {
                 "id": "d17de00a-6490-4888-83bb-a60294f2f6fc",
@@ -276,6 +284,14 @@
                 "id": "de69f143-8da4-4a6a-a590-3e634f99059e",
                 "resourcePath": "notes\\compatibility_report_060617_143802382.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "3963752e-7961-47e7-a4c5-fac8ef12d502",
+            "Value": {
+                "id": "1f104dbe-2eec-4129-91ce-ad42a444fb22",
+                "resourcePath": "scripts\\scr_collision\\scr_collision.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -599,6 +615,14 @@
             }
         },
         {
+            "Key": "65b59c1f-fa77-4ab5-93dd-df3f8a376ebc",
+            "Value": {
+                "id": "17adda36-1d40-49de-a619-6ee221be9447",
+                "resourcePath": "sprites\\sprAttack\\sprAttack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "67b5b293-89c6-449c-9d92-940e548d093e",
             "Value": {
                 "id": "033ea1b3-914e-41aa-9913-7a2088907b0c",
@@ -644,6 +668,14 @@
                 "id": "f947fd51-dacc-47f4-9e21-461ec604acd6",
                 "resourcePath": "scripts\\approach\\approach.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6c1ecda2-b7de-433d-b3ae-7ced389d7e92",
+            "Value": {
+                "id": "1320a8c7-5a97-4074-a4a6-3fe4923834ba",
+                "resourcePath": "shaders\\shader_0\\shader_0.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -972,6 +1004,14 @@
                 "id": "70b578d5-37b7-4594-8223-9738b28b4a8f",
                 "resourcePath": "scripts\\draw_sprite_outlined\\draw_sprite_outlined.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "990d8e4d-3b9d-4b23-80fb-18864e55f4c1",
+            "Value": {
+                "id": "3473e8d1-5322-4e3b-9598-63cd54f4a56e",
+                "resourcePath": "objects\\oAttack\\oAttack.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1698,7 +1738,8 @@
         "0d2e53c0-5ba6-45ef-b82f-45a8466a7719",
         "9be50b6c-ee34-419f-884e-0271bfb9aaac",
         "a20bfcb7-6e81-4079-bedf-bf4cd3e2cdff",
-        "c10482c5-67a6-4636-8915-243bc4a5cef9"
+        "c10482c5-67a6-4636-8915-243bc4a5cef9",
+        "3963752e-7961-47e7-a4c5-fac8ef12d502"
     ],
     "tutorial": ""
 }

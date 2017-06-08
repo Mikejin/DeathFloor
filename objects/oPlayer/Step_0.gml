@@ -42,6 +42,13 @@ with (oSomething1)
 	}
 }
 //DEBUG
+
+//被攻击
+//击中的闪光
+if (hit && alarm[3] <= 0) {
+   alarm[3] = 0.05 * room_speed; // Flashes for 0.8 seconds before turning back to normal
+}
+
 //压缩手电长度
 if (lowest != noone) 
 {
@@ -66,15 +73,6 @@ if leavingCover
 	image_alpha = smooth_approach(image_alpha,1,0.15)
 }
 
-//是否下落
-if(place_meeting(x, y + 1, object_solid))
-{
-    grounded = true;
-}
-else
-{
-    grounded = false;
-}
 
 //执行状态机
 script_execute(state);
@@ -85,28 +83,8 @@ if(xspeed != 0)                                                 //If the xspeed 
     facing = sign(xspeed);
 	lightFacing = smooth_approach(lightFacing,facing,0.18) ;                                      //and so we can change the facing direction.
 }
-
-//Horizontal Collision and Movement
-if(place_meeting(x + xspeed, y, object_solid))                  
-{                                                               
-    while(!place_meeting(x + sign(xspeed), y, object_solid))    
-    {                                                           
-        x += sign(xspeed);                                      
-    }
-    xspeed = 0;
-}
-x += xspeed;
-
-//Vertical Collision and Movement
-if(place_meeting(x, y + yspeed, object_solid))
-{
-    while(!place_meeting(x, y + sign(yspeed), object_solid))
-    {
-        y += sign(yspeed);
-    }
-    yspeed = 0;
-}
-y += yspeed;
+//碰撞
+scr_collision();
 
 //重置手电高度
 flashLightH		= smooth_approach(flashLightH,-26,0.25);
@@ -139,7 +117,7 @@ switch(action)                                                  //The switch sta
     case PLAYER_ACTION.run:
         sprite_index    = sPlayerFlashWalk;
         image_speed     = 0.9;
-		run_speed		= 8.9;
+		run_speed		= 0.9;
         break;
 
     case PLAYER_ACTION.fall:

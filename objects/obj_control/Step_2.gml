@@ -25,11 +25,14 @@ with (obj_torch) { //This runs through all the instances of the given object
 }
 
 //Player light
+var i;
+for (i = 0; i < instance_number(oPlayer); i += 1)
+   {
+   var pp = instance_find(oPlayer,i);
 
-draw_sprite_ext(spr_light_circle, 0, oPlayer.x, oPlayer.y , 0.05, 0.05, 0, make_color_rgb(255,159,79), 0.4); //Here we do the same as above, but we use a specific colour, alpha and scale
-    //draw_sprite_ext(spr_light_circle, 0, x - __view_get( e__VW.XView, 0 ), y - __view_get( e__VW.YView, 0 ), 0.5, 0.5, 0, make_color_rgb(255,159,79), 0.4); //This is another light, the outer light that follows the player - to show you can "stack" light too
-draw_sprite_ext(spr_light_player, 0, oPlayer.x, oPlayer.y+flashHeight, 0.3 *lightFacing* brightness*lightLength, 0.25* brightness, 0, 0, make_color_rgb(255,159,79), 0.9); //Now let's draw the flash light whose angle follows the mouse direction (see "light_angle" in obj_player)
-
+	draw_sprite_ext(spr_light_circle, 0, pp.x, pp.y+pp.flashLightH, 0.1* pp.brightness*pp.lightLength, 0.1* pp.brightness*pp.lightLength, 0, make_color_rgb(255,159,79), 0.4); //Here we do the same as above, but we use a specific colour, alpha and scale
+	draw_sprite_ext(spr_light_player, 0, pp.x, pp.y+pp.flashLightH, 0.3 *pp.lightFacing* pp.brightness*pp.lightLength, 0.25* pp.brightness, 0, make_color_rgb(255,159,79), 0.9); //Now let's draw the flash light whose angle follows the mouse direction (see "light_angle" in obj_player)
+   }
 
 draw_set_alpha(1); //Just to make sure our drawing alpha will stay at 1 when we're finished
 

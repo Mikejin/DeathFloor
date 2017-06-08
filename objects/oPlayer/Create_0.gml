@@ -103,11 +103,16 @@ crouching			= false;
 noiseLevel			= 0;
 lootingProgress		= 0;
 
+//战斗
+hit					=false;
+canAttack			= true;
+attackRate			= 20;
+
 //按键
 butFlashLight		= gp_face4
 butCheck			= gp_face1
 butCrouch			= gp_face2
-butHide				= gp_face1
+butATK				= gp_face3
 
 //噪音
 noiseFreq			= 2 * room_speed;

@@ -88,6 +88,18 @@ if(yspeed > 0)
     else
     {action = PLAYER_ACTION.fall;}
     
+	//攻击
+	if gamepad_button_check_pressed(playerNumber,gp_face3) and canAttack
+	{
+		ATK = instance_create_depth(x+facing*10,y-20,depth,oAttack)
+		ATK.master = id;
+		ATK.sprite_index = sprAttack;
+		ATK.image_xscale = facing * 0.4;	
+		ATK.image_yscale = 0.4;	
+		alarm[0] = attackRate;
+		canAttack = false;
+	}
+	
 	//爬梯子
     if(object_ladder != noone && can_climb)
     {

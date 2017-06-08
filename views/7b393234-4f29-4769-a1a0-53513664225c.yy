@@ -22,7 +22,9 @@
         "6d1c1583-d312-4eb2-b051-fa7818932180",
         "be395032-8a6e-4012-98db-f3720b76ffcb",
         "3f408a8f-172f-4eb4-97dc-9fc435e505d4",
-        "24c3d45c-2b8f-4717-ab6e-01941056a162"
+        "24c3d45c-2b8f-4717-ab6e-01941056a162",
+        "53a7a47d-b599-443b-a99a-ff8592114bf3",
+        "6c1ecda2-b7de-433d-b3ae-7ced389d7e92"
     ],
     "filterType": "GMShader",
     "folderName": "shaders",
