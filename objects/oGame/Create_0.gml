@@ -7,4 +7,4 @@ game_set_speed(60, gamespeed_fps);
 #macro PLAYERBEHIND -10
 #macro THINGSLAYER	-5
 
-
+mysurface=surface_create(300,300);

@@ -20,47 +20,49 @@ else
 	}
 }
 
-//手电与墙的遮挡
-var val, lowest, lowest_val;
-lowest = noone;
-lowest_val = noone;
-with (oSomething1) 
+//手电逻辑
+scr_flashLight();
+
+//判断是否被其他玩家看到
+ds_list_clear(canSeeMe)
+for (var i=0;i<instance_number(oPlayer);i++)
 {
-	if x-other.x > x - other.x - other.facing //判断玩家对着这堵墙
+	var curinst = instance_find(oPlayer,i);
 	{
-		val = point_distance(x,y,other.x,other.y);
-		if (lowest == noone || val < lowest_val) 
+		if curinst.id != id and point_distance(x,0,curinst.x,0) < 120 and lighted = true//不是自己且距离小于半个屏幕 
 		{
-	    lowest = id;
-	    lowest_val = val;
+		ds_list_add(canSeeMe,curinst.id)
 		}
 	}
-	else
-	{
-	lowest = noone;
-	lowest_val = noone;
-	}
 }
+
+//是否被照亮
+if place_meeting(x,y,oLightSource) || lightOn ==true
+{
+	lighted = true;
+}
+else
+{
+	lighted = false;
+}
+
 //DEBUG
 
 //被攻击
 //击中的闪光
-if (hit && alarm[3] <= 0) {
-   alarm[3] = 0.05 * room_speed; // Flashes for 0.8 seconds before turning back to normal
-}
-
-//压缩手电长度
-if (lowest != noone) 
+if hit
 {
-	if point_distance(x,y,lowest.x,lowest.y) < 130
+	//击退
+	if !place_meeting(x+fallDir*3,y,oSolid)
 	{
-	clamp(lightLength,0.1,1)
-	lightLength = point_distance(x,y,lowest.x,lowest.y)/130
+	x += 5*fallDir
 	}
-}
-else
-{
-	lightLength = 1;
+
+	if alarm[3] <=0
+	{
+	y -= 0;
+	alarm[3] = 0.05 * room_speed; // Flashes for 0.8 seconds before turning back to normal
+	}
 }
 
 //进入掩体alpha值下降
@@ -81,7 +83,7 @@ script_execute(state);
 if(xspeed != 0)                                                 //If the xspeed variable is not 0 it means
 {                                                               //either the left or right key has been pressed
     facing = sign(xspeed);
-	lightFacing = smooth_approach(lightFacing,facing,0.18) ;                                      //and so we can change the facing direction.
+	lightFacing = smooth_approach(lightFacing,facing,0.08) ;                                      //and so we can change the facing direction.
 }
 //碰撞
 scr_collision();
@@ -119,7 +121,12 @@ switch(action)                                                  //The switch sta
         image_speed     = 0.9;
 		run_speed		= 0.9;
         break;
-
+		
+    case PLAYER_ACTION.attack:
+        sprite_index    = sPlayerAttack;
+        image_speed     = 0.9;
+        break;
+		
     case PLAYER_ACTION.fall:
         sprite_index    = sPlayerIdle;
         image_speed     = 5 / room_speed;

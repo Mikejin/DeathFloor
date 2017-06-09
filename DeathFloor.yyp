@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "19c39119-eb3e-4612-ab94-01b0cc2bb55a",
+            "Value": {
+                "id": "7b03a002-d7e3-47d9-b119-08b1bc5ecd0e",
+                "resourcePath": "scripts\\scr_flashLight\\scr_flashLight.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1c66eb8e-f190-4c96-85d0-03136aeb59f4",
             "Value": {
                 "id": "f21c80ca-5bd9-43f5-91cd-944fa8178309",
@@ -154,7 +162,7 @@
             "Key": "1d7173d2-75fa-4cd6-b264-ce02c8e73016",
             "Value": {
                 "id": "4251c2a7-e163-443b-bc3a-9a268471fc4f",
-                "resourcePath": "objects\\obj_control\\obj_control.yy",
+                "resourcePath": "objects\\oDarkRoomAndLight\\oDarkRoomAndLight.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -359,14 +367,6 @@
             }
         },
         {
-            "Key": "4219071f-42b6-485b-a9fc-08c046180104",
-            "Value": {
-                "id": "b8ead02e-0db4-4f8b-8f36-c386033379ec",
-                "resourcePath": "objects\\oFlashDISCARDED\\oFlashDISCARDED.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "4375d31f-6b4c-47e0-b78e-696c0f48e587",
             "Value": {
                 "id": "8d073b5f-3ef0-4858-9470-43cd63c948ed",
@@ -468,6 +468,14 @@
                 "id": "0c620e75-095b-4e27-8643-a94c46b1f8a3",
                 "resourcePath": "shaders\\shd_posterization\\shd_posterization.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "56c8abf4-caa1-46d6-91fc-2ae4db3c469c",
+            "Value": {
+                "id": "14bb5a05-008d-4d20-8109-229c476b18a5",
+                "resourcePath": "objects\\oPlayerGhost\\oPlayerGhost.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -663,6 +671,14 @@
             }
         },
         {
+            "Key": "6ae56f3d-8199-4c0c-b9e0-1a4dcb05b7a3",
+            "Value": {
+                "id": "8117de49-69fd-4d85-93a5-55a154a7b4f6",
+                "resourcePath": "objects\\oLightSource\\oLightSource.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6c112f34-15f7-4412-89cf-9f025b4e54a3",
             "Value": {
                 "id": "f947fd51-dacc-47f4-9e21-461ec604acd6",
@@ -852,6 +868,14 @@
                 "id": "2f1cbccd-16e0-4806-a53c-50103cc30a34",
                 "resourcePath": "scripts\\multi_chance\\multi_chance.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8005f30d-dcb2-419a-ac9e-bfd4503e1758",
+            "Value": {
+                "id": "23362474-b3f0-42f5-9b65-5e5863be9912",
+                "resourcePath": "objects\\oPlayer3\\oPlayer3.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1274,7 +1298,7 @@
             "Key": "bc86ac65-1f0f-4e94-b68a-2e0a4d1746ab",
             "Value": {
                 "id": "30d1f0b9-78cb-4d43-aba5-ecef8eada47d",
-                "resourcePath": "objects\\oSomething1\\oSomething1.yy",
+                "resourcePath": "objects\\oDoor\\oDoor.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1559,6 +1583,14 @@
             }
         },
         {
+            "Key": "e8b99012-2770-4770-affd-ed6e6e83aecb",
+            "Value": {
+                "id": "d0978621-5f63-4b2d-9d66-8ec1e8d4185c",
+                "resourcePath": "objects\\oPlayerFlashLight\\oPlayerFlashLight.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ebb2f761-9356-4107-9a98-1d0915369998",
             "Value": {
                 "id": "2c3dafd9-0148-4eb5-be0f-2784ce99e6b9",
@@ -1739,7 +1771,8 @@
         "9be50b6c-ee34-419f-884e-0271bfb9aaac",
         "a20bfcb7-6e81-4079-bedf-bf4cd3e2cdff",
         "c10482c5-67a6-4636-8915-243bc4a5cef9",
-        "3963752e-7961-47e7-a4c5-fac8ef12d502"
+        "3963752e-7961-47e7-a4c5-fac8ef12d502",
+        "19c39119-eb3e-4612-ab94-01b0cc2bb55a"
     ],
     "tutorial": ""
 }

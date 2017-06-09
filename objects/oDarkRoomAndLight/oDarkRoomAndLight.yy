@@ -2,7 +2,7 @@
     "id": "1d7173d2-75fa-4cd6-b264-ce02c8e73016",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_control",
+    "name": "oDarkRoomAndLight",
     "eventList": [
         {
             "id": "d4178f08-39dd-4fdc-9a43-64ca51e4736b",
@@ -21,16 +21,6 @@
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 2,
-            "eventtype": 3,
-            "m_owner": "1d7173d2-75fa-4cd6-b264-ce02c8e73016"
-        },
-        {
-            "id": "412abf41-f457-469e-98a0-b0f290909c8d",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
             "eventtype": 3,
             "m_owner": "1d7173d2-75fa-4cd6-b264-ce02c8e73016"
         },

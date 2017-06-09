@@ -5,10 +5,10 @@ randomize();
 moving = false;
 
 //创建手电
-lightOn = true;
-lightLength = 1;
-brightness = 1;
-lightFacing = 1;
+lightOn = true;		//开手电了吗？
+lightLength = 1;	//跟枪碰撞的手电
+brightness = 1;		//手电亮度
+lightFacing = 1;	//手电朝向
 
 //lightLayer = instance_create_depth(x,y,depth,obj_control)
 //lightLayer.master = id;
@@ -17,6 +17,10 @@ lightFacing = 1;
 depth = PLAYERFRONT;
 //临时
 lowest1 = noone;
+
+//谁能看见我？
+canSeeMe = ds_list_create();
+
 
 //Enumerations
 enum PLAYER_STATE                               //Each state is assigned the index of the corresponding script.
@@ -40,7 +44,8 @@ enum PLAYER_ACTION                              //This is used simply as a way o
     traverse,
 	crouchIdle,
 	crouchWalk,
-	looting	
+	looting,
+	attack
 }
 
 
@@ -95,18 +100,22 @@ wall_jump_height    = 48;
 hang_height         = 36;   //How many pixels below the ledge the player will hang.
 
 //状态相关
+
 enteringCover		= false;
 leavingCover		= false;
 inCover				= false;
 inOutCoverTime		= 1.7 * room_speed;
-crouching			= false;
-noiseLevel			= 0;
-lootingProgress		= 0;
+
+lighted				= false;	//被照亮？
+crouching			= false;//蹲下？
+noiseLevel			= 0;//噪音等级
+lootingProgress		= 0;//搜索的进度
 
 //战斗
 hit					=false;
 canAttack			= true;
 attackRate			= 20;
+fallDir				= 0;
 
 //按键
 butFlashLight		= gp_face4
@@ -117,6 +126,14 @@ butATK				= gp_face3
 //噪音
 noiseFreq			= 2 * room_speed;
 alarm[1]			= 60;
+
+//创建手电
+flashLight = instance_create_depth(x,y,depth,oPlayerFlashLight)
+flashLight.master = id;
+
+//创建ghost
+ghost = instance_create_layer(x,y,"Instances_2",oPlayerGhost)
+ghost.master = id;
 
 //摄像机
 camera = instance_create_depth(x,y-50,depth,oCamera);

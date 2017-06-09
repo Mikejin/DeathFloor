@@ -1,2 +1,2 @@
 event_inherited();
-playerNumber = 1;
+playerNumber = 2;

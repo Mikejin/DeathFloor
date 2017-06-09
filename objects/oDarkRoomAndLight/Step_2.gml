@@ -1,3 +1,4 @@
+
 //Create a new surface if it doesn't exist anymore, for example when you minimize the window the surface gets deleted
 if (!surface_exists(surface)) {
     surface = surface_create(room_width,room_height); 
@@ -30,7 +31,7 @@ for (i = 0; i < instance_number(oPlayer); i += 1)
    {
    var pp = instance_find(oPlayer,i);
 
-	draw_sprite_ext(spr_light_circle, 0, pp.x, pp.y+pp.flashLightH, 0.1* pp.brightness*pp.lightLength, 0.1* pp.brightness*pp.lightLength, 0, make_color_rgb(255,159,79), 0.4); //Here we do the same as above, but we use a specific colour, alpha and scale
+	draw_sprite_ext(spr_light_circle, 0, pp.x+pp.facing*7, pp.y+pp.flashLightH, 0.1* pp.brightness*pp.lightLength, 0.1* pp.brightness*pp.lightLength, 0, make_color_rgb(255,159,79), 0.4); //Here we do the same as above, but we use a specific colour, alpha and scale
 	draw_sprite_ext(spr_light_player, 0, pp.x, pp.y+pp.flashLightH, 0.3 *pp.lightFacing* pp.brightness*pp.lightLength, 0.25* pp.brightness, 0, make_color_rgb(255,159,79), 0.9); //Now let's draw the flash light whose angle follows the mouse direction (see "light_angle" in obj_player)
    }
 
