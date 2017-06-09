@@ -4,7 +4,7 @@ closest = noone;
 closest_doorDis = noone;
 with (oDoor) 
 {
-	if x-other.x > x - other.x - other.facing //判断玩家对着这堵墙
+	if sign(x-other.x) = sign(other.facing)  //说明玩家对着这堵墙
 	{
 		doorDis = point_distance(x,y,other.x,other.y);
 		if (closest == noone || doorDis < closest_doorDis) 
@@ -20,6 +20,7 @@ with (oDoor)
 	}
 }
 
+tem = closest
 //压缩手电长度
 if (closest != noone) 
 {

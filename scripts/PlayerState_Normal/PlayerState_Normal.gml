@@ -88,6 +88,7 @@ if(yspeed > 0)
     else
     {action = PLAYER_ACTION.fall;}
     
+
 	//攻击
 	if gamepad_button_check_pressed(playerNumber,gp_face3) and canAttack
 	{
@@ -129,6 +130,18 @@ if(yspeed > 0)
 		}
 	}	
 	
+	//听觉
+	if gamepad_button_check(playerNumber,gp_shoulderl) 
+	{	
+		state = PLAYER_STATE.listening;
+		listening = true;
+		exit;
+	}
+	else
+	{
+		state = PLAYER_STATE.normal;
+		listening = false;		
+	}
 	/*
 	//躲避
 	if(object_cover != noone && can_hide)

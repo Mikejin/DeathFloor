@@ -24,7 +24,7 @@ surface = surface_create(room_width,room_height); //Fist we create a surface wit
 
 //Those are variables for the darkness of the room
 surface_control = 0; //With that we will decide if the room should get darker or brighter
-surface_alpha = 0.05; //This is the overlays alpha, as you will see in the step event, the higher this gets the brighter the room is
+surface_alpha = 0.1; //This is the overlays alpha, as you will see in the step event, the higher this gets the brighter the room is
 
 /* */
 /*  */

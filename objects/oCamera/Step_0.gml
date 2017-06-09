@@ -8,7 +8,7 @@ if instance_exists(master)
 var cam = view_camera[master.playerNumber]
 
 //摄像机跟随
-camera_set_view_pos(cam,x-camera_get_view_width(cam)/2 + random_range(-shake,shake),y-camera_get_view_height(cam)/2 + random_range(-shake,shake));
+camera_set_view_pos(cam,x-camera_get_view_width(cam)/2 + random_range(-shake,shake),y-camera_get_view_height(cam)/2-30 + random_range(-shake,shake));
 
 //抖动
 shake *= decay;

@@ -7,6 +7,7 @@ scr_gamepad_movement(playerNumber);
 //光
 if lightOn = true
 {
+	instance_activate_object(flashLight)//关闭手电筒
 	if brightness<1
 	{
 		brightness = smooth_approach(brightness,1,0.15);
@@ -14,30 +15,34 @@ if lightOn = true
 }
 else 
 {
+	instance_deactivate_object(flashLight)
 	if brightness >0
 	{
 		brightness = smooth_approach(brightness,0,0.15);
 	}
 }
 
+//碰撞
+scr_collision();
+
 //手电逻辑
 scr_flashLight();
 
-//判断是否被其他玩家看到
-ds_list_clear(canSeeMe)
-for (var i=0;i<instance_number(oPlayer);i++)
+//管理自己被谁发现
+scr_expose();
+
+if !listening//不在聆听状态
 {
-	var curinst = instance_find(oPlayer,i);
+		//才会回复聆听值
+	if focus < focusMax
 	{
-		if curinst.id != id and point_distance(x,0,curinst.x,0) < 120 and lighted = true//不是自己且距离小于半个屏幕 
-		{
-		ds_list_add(canSeeMe,curinst.id)
-		}
+	focus += focusMax/room_speed/18;
 	}
 }
 
 //是否被照亮
-if place_meeting(x,y,oLightSource) || lightOn ==true
+temp = place_meeting(x,y,oLightSource)
+if temp || lightOn ==true
 {
 	lighted = true;
 }
@@ -85,8 +90,6 @@ if(xspeed != 0)                                                 //If the xspeed 
     facing = sign(xspeed);
 	lightFacing = smooth_approach(lightFacing,facing,0.08) ;                                      //and so we can change the facing direction.
 }
-//碰撞
-scr_collision();
 
 //重置手电高度
 flashLightH		= smooth_approach(flashLightH,-26,0.25);
@@ -99,6 +102,9 @@ switch(action)                                                  //The switch sta
 		image_index		= 10;
         image_speed     = 0;
 		run_speed		= 0.9
+		noiseLevel		= 1;
+		noiseRate		= room_speed*2;
+		noiseReach		= 30;
         break;
 		
 	case PLAYER_ACTION.crouchWalk:                                   //corresponding case.
@@ -106,6 +112,9 @@ switch(action)                                                  //The switch sta
 		image_speed		= 0.5;
 		flashLightH		= smooth_approach(flashLightH,-16,0.1);
 		run_speed		= 0.4
+		noiseLevel		= 2;
+		noiseRate		= room_speed*1.4;
+		noiseReach		= 100;
         break;	
 		
 	case PLAYER_ACTION.crouchIdle:                                   //corresponding case.
@@ -114,28 +123,40 @@ switch(action)                                                  //The switch sta
 		image_index		= 1;
 		flashLightH		= smooth_approach(flashLightH,-16,0.1);
 		run_speed		= 0.4
+		noiseLevel		= 1;
+		noiseRate		= room_speed*2;
+		noiseReach		= 30;
         break;
     
     case PLAYER_ACTION.run:
         sprite_index    = sPlayerFlashWalk;
         image_speed     = 0.9;
 		run_speed		= 0.9;
+		noiseLevel		= 5;
+		noiseRate		= room_speed*0.6;
+		noiseReach		= 280;
         break;
 		
     case PLAYER_ACTION.attack:
         sprite_index    = sPlayerAttack;
         image_speed     = 0.9;
+		noiseLevel		= 4;
+		noiseRate		= room_speed*0.6;
+		noiseReach		= 300;
         break;
 		
     case PLAYER_ACTION.fall:
         sprite_index    = sPlayerIdle;
         image_speed     = 5 / room_speed;
+		
         break;
 		
 	case PLAYER_ACTION.looting:
         sprite_index    = sPlayerCheck;
         image_speed     = 0.6;
-		
+		noiseLevel		= 4;
+		noiseRate		= room_speed*1;
+		noiseReach		= 300;
         break;
     
     case PLAYER_ACTION.float:
@@ -158,11 +179,13 @@ switch(action)                                                  //The switch sta
         {
             image_speed = -6 / room_speed;
         }
+		noiseLevel		= 3;
         break;
     
     case PLAYER_ACTION.traverse:
         sprite_index    = sPlayerFlashWalk;
         image_speed     = 6 / room_speed;
+		noiseLevel		= 3;
         break;
 }
 

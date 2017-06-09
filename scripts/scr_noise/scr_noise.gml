@@ -1,16 +1,14 @@
 /// @description noise making
 /// @function noise
-/// @param  loudness
-/// @param  duration
+/// @param  NoiseLevel
+/// @param  Reach
 /// @param  posX
 /// @param  posY
 
-loudness = argument0
-duration = argument1
 xPos = argument2
 yPos = argument3
 
-sound = instance_create_depth(xPos,yPos,depth,oNoise)
-sound.noiseLevel	= loudness
-sound.alarm[0]		= duration;
+sound = instance_create_layer(xPos,yPos,"Instances_2",oNoise)
+sound.noiseLevel	= argument0
+sound.noiseReach	= argument1;
 sound.master		= id;

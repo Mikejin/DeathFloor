@@ -5,10 +5,23 @@ randomize();
 moving = false;
 
 //创建手电
-lightOn = true;		//开手电了吗？
+lightOn = false;		//开手电了吗？
 lightLength = 1;	//跟枪碰撞的手电
 brightness = 1;		//手电亮度
 lightFacing = 1;	//手电朝向
+
+//听觉系统
+listening		= true;
+focus			= room_speed * 5
+focusMax		= room_speed * 5;
+ListenThreshold	= 7;
+noiseLevel	= 1;
+noiseReach	= 0;
+
+temp = false;
+
+noiseRate	= room_speed *2;	//制造声音的冷却时间
+alarm[1]	= room_speed *2;	//制造噪音
 
 //lightLayer = instance_create_depth(x,y,depth,obj_control)
 //lightLayer.master = id;
@@ -16,10 +29,10 @@ lightFacing = 1;	//手电朝向
 //叠层
 depth = PLAYERFRONT;
 //临时
-lowest1 = noone;
+tem = noone;
 
 //谁能看见我？
-canSeeMe = ds_list_create();
+findMe = ds_list_create();
 
 
 //Enumerations
@@ -29,7 +42,8 @@ enum PLAYER_STATE                               //Each state is assigned the ind
     swim        = PlayerState_Swim,
     climb       = PlayerState_Climb,
 	hide		= PlayerState_Hide,
-	check		= PlayerState_Loot
+	check		= PlayerState_Loot,
+	listening	= PlayerState_Listening
 }
 enum PLAYER_ACTION                              //This is used simply as a way of telling what the player is
 {                                               //doing to avoid having to put animation, sound or effects
@@ -46,6 +60,7 @@ enum PLAYER_ACTION                              //This is used simply as a way o
 	crouchWalk,
 	looting,
 	attack
+
 }
 
 
@@ -105,7 +120,6 @@ enteringCover		= false;
 leavingCover		= false;
 inCover				= false;
 inOutCoverTime		= 1.7 * room_speed;
-
 lighted				= false;	//被照亮？
 crouching			= false;//蹲下？
 noiseLevel			= 0;//噪音等级
@@ -126,6 +140,10 @@ butATK				= gp_face3
 //噪音
 noiseFreq			= 2 * room_speed;
 alarm[1]			= 60;
+
+//创建叠色板
+blend = instance_create_layer(x,y,"Instances_2",oBlendLayer)
+blend.master = id;
 
 //创建手电
 flashLight = instance_create_depth(x,y,depth,oPlayerFlashLight)
